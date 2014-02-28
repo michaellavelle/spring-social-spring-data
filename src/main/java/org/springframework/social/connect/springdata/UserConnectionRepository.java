@@ -18,6 +18,7 @@ package org.springframework.social.connect.springdata;
 import java.util.List;
 
 import org.springframework.data.repository.NoRepositoryBean;
+import org.springframework.data.repository.query.Param;
 
 /**
  * @author Michael Lavelle
@@ -26,9 +27,9 @@ import org.springframework.data.repository.NoRepositoryBean;
 public interface UserConnectionRepository<ID extends UserConnectionKey, U extends UserConnection<ID>>
 		extends RemoteUserRepository<ID, U> {
 
-	List<U> findByUserConnectionKeyUserId(String userId);
+	List<U> findByUserConnectionKeyUserId(@Param("userId") String userId);
 
 	List<U> findByUserConnectionKeyUserIdAndUserConnectionKeyProviderId(
-			String userId, String providerId);
+			@Param("userId") String userId, @Param("providerId") String providerId);
 
 }
