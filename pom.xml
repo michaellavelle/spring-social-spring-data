@@ -7,7 +7,7 @@
 	<version>1.1.0-SNAPSHOT</version>
 	<name>Spring Social Spring Data ConnectionRepository plugin</name>
 	<properties>
-		<spring.social.version>1.1.0.BUILD-SNAPSHOT</spring.social.version>
+		<spring.social.version>1.1.0.RC1</spring.social.version>
 		<spring.social.core.extension.version>1.1.0-SNAPSHOT</spring.social.core.extension.version>
 		<spring.data.commons.version>1.7.0.RELEASE</spring.data.commons.version>
 		<spring.social.jpa.version>0.0.1-SNAPSHOT</spring.social.jpa.version>
@@ -59,6 +59,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.social</groupId>
+			<artifactId>spring-social-web</artifactId>
+			<version>${spring.social.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.social</groupId>
 			<artifactId>jpa</artifactId>
 			<version>${spring.social.jpa.version}</version>
 		</dependency>
@@ -66,6 +71,17 @@
 			<groupId>org.springframework.social</groupId>
 			<artifactId>spring-social-core</artifactId>
 			<version>${spring.social.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 	<build>
